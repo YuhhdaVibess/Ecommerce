@@ -1,0 +1,28 @@
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.Btn {
+   font-size: 1rem;
+   padding: 1rem;
+   margin: 2rem;
+   margin-top: 3rem;
+   margin-bottom: 6rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: Lato;
+   color: #fff;
+   background-color: black;
+   border: 2px solid black;
+   cursor: pointer;
+   
+}
+
+.Btn:hover {
+   background-color: #fff;
+   color: black;
+}
+

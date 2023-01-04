@@ -1,0 +1,171 @@
+.Product-Screen {
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+}
+
+.Product-Section {
+    display: flex;
+    padding-top: 40px;
+    justify-content: flex-end;
+   background-color: white;
+}
+
+.Product-Screen-img {
+    padding: 1rem;
+    background-color: #fff;
+    padding-top: 50px;
+    max-height: 32em;
+    margin-right: 20px;
+    width: 35%;
+}
+
+.Product-Screen-info {
+   display: flex;
+   flex-direction: column;
+   max-width: 440px;
+   width: 100%;
+}
+
+.Product-Screen-info-container {
+    width: 42%;
+    margin-right: 20px;
+}
+
+.Product-Screen-Description {
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding:0px 10px;
+    margin: 10px;
+}
+
+.Product-Screen-Title {
+    font-family: Lato;
+    font-size: 0.85rem;
+    color: grey;
+    padding: 0px 14px;
+    margin: 10px;
+}
+
+.Catagory {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 21px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.Sizes-Container {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 21px;
+}
+
+.Sizes  {
+   cursor: pointer;
+   line-height: 42px;
+   border: 1.5px solid rgb(231, 231, 231);
+   display: flex;
+   justify-content: center;
+   font-size: 14px;
+   font-weight: 500;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.Sizes:hover {
+    border: 1.5px solid grey;
+}
+
+
+.Product-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    margin-left: 21px;
+    column-gap: 11px;
+    margin-bottom: 60px;
+}
+
+.Product-btn {
+    font-size: 14px;
+    padding: 1rem;
+    font-family: Lato;
+    background-color: rgb(233, 28, 35);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.Product-btn-used {
+    font-size: 14px;
+    padding: 16px;
+    font-family: Lato;
+    background-color: #EAEAEA;
+    border: 0;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.Product-gap {
+    height: 10px;
+    background-color: rgb(249, 249, 249);
+    margin-left: 21px;
+}
+
+.About-container {
+    margin-left: 21px;
+    padding-top: 20px;
+}
+
+.Product-about-p {
+line-height: 16px;
+font-size: 12px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+padding-top: 10px;
+}
+
+.Product-about-p2 {
+  margin-top: 20px;
+  font-size: 12px;
+  color: rgb(129, 129, 129);
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Product-Shipping-Container {
+    margin-top: 40px;
+    border-top: 1px solid rgb(231, 231, 231);
+}
+
+.Product-shipping-header {
+     margin-top: 20px;
+}
+
+.Product-cancellations, .Product-delivery, .Product-returns {
+    line-height: 18px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.Product-bottom {
+    margin-top: 25px;
+    border-top: 1px solid rgb(231, 231, 231);
+    margin-bottom: 60px;
+}
+
+.y {
+    background-color: black;
+    color: green;
+}

@@ -1,0 +1,47 @@
+.info-container {
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    vertical-align: top;
+    margin: auto;
+    background-color: #fff;
+}
+
+.info-container2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding: 1rem;
+}
+
+.info-img {
+    width: 30vw;
+    height: 47vh;
+}
+
+.super-container {
+    background-color: #fff;
+    margin-top: 10px;
+    display: flex;;
+}
+
+.info-h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 35px ;
+}
+
+.info-p {
+font-family: Lato;
+font-size: 0.9rem;
+color: grey;
+margin-top: 30px;
+width: 550px;
+height: 50px;
+}
+
+.info-link {
+color: black;
+font-family: Lato;
+margin-top: 60px;
+}

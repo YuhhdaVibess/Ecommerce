@@ -1,0 +1,35 @@
+.products-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    margin: auto;
+    max-width: 1200px;
+    background-color: #fff;
+}
+
+.Product {
+    padding: 1rem;
+    background-color: #fff;
+    padding-top: 50px;
+    cursor: pointer;
+}
+
+.Product img {
+    width: 100%;
+    
+}
+
+.Title2 {
+    font-family: Lato;
+    font-size: 1rem;
+    color: grey;
+    padding: 0px 10px;
+}
+
+.Description2 {
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding:0px 10px;
+}

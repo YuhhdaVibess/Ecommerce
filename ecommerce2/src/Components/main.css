@@ -1,0 +1,36 @@
+.main {
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
+}
+
+.main img {
+   object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 0% 38%;
+}
+
+.main-text {
+font-size: 50px;
+color: white;
+line-height: 1;
+letter-spacing: -1px;
+}
+
+.main-link {
+color: white;
+margin-left: 20px;
+display: inline-block;
+margin-top: 20px;
+}
+
+.container {
+  position: absolute;
+  margin-top: -218px;
+  margin-right: 60rem;
+}

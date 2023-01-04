@@ -1,0 +1,33 @@
+/*li {
+    margin-right: 20px;
+}
+
+ul {
+    display: flex;
+   list-style-type: none;
+   font-family: 'Lato', sans-serif;
+    font-size: 17px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+*/
+
+.NavList-ul {
+    display: flex;
+    list-style-type: none;
+    font-family: 'Lato', sans-serif;
+     font-size: 17px;
+}
+
+.NavList-ul li {
+    margin-right: 20px;
+}
+
+.NavList-ul li a {
+    color: white;
+    text-decoration: none;
+}
+

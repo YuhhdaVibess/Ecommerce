@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@chec/commerce.js": "^2.8.0",
+    "react-router-dom": "^6.5.0"
+  }
+}

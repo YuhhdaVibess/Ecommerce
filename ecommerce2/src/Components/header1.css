@@ -1,0 +1,9 @@
+.header1 {
+    background-color: black;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
