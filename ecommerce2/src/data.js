@@ -2,13 +2,13 @@ export const NewReleases = [
     {
         
         id: 1,
-        img: 'https://cdn.flightclub.com/2200/TEMPLATE/244675/1.jpg',
+        img: 'https://images.unsplash.com/photo-1617606002806-94e279c22567?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
         title: 'Air Jordan',
         description: `A MA MANIÉRE X WMNS AIR JORDAN 3 RETRO SP 'RAISED BY WOMEN'`,
         sizes: [
             {
                 size: 1,
-                price: '$190+',
+                price: 190,
                 id: 4.1
     
             },
@@ -129,7 +129,7 @@ export const NewReleases = [
 
     {
         id: 2,
-        img: 'https://cdn.flightclub.com/2200/TEMPLATE/806456/1.jpg',
+        img: 'https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
         title: 'Nike',
         description: `WMNS AIR FORCE 1 '07 'WHITE'`,
         sizes: [
@@ -256,7 +256,7 @@ export const NewReleases = [
 
     {
         id: 3,
-        img: 'https://cdn.flightclub.com/2200/TEMPLATE/174409/1.jpg',
+        img: 'https://images.unsplash.com/photo-1580611519215-e5b704997e2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjYzM3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         title: 'Air Jordan',
         description: `OFF-WHITE X WMNS AIR JORDAN 4 SP 'SAIL'`,
         sizes: [
@@ -383,7 +383,7 @@ export const NewReleases = [
 
     {
         id: 4,
-        img: 'https://cdn.flightclub.com/2200/TEMPLATE/338986/1.jpg',
+        img: 'https://images.unsplash.com/photo-1636461848970-f9aadbc7b80b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjcyMHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         title: 'New Balance',
         description: `WMNS 550 'WHITE GREY'`,
         sizes: [
@@ -510,7 +510,7 @@ export const NewReleases = [
 
     {
         id: 5,
-        img: 'https://cdn.flightclub.com/2200/TEMPLATE/264972/1.jpg',
+        img: 'https://images.unsplash.com/photo-1588099768523-f4e6a5679d88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjI1NXx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         title: 'Nike',
         description: `WMNS DUNK HIGH 'BLACK WHITE'`,
         sizes: [
@@ -637,7 +637,7 @@ export const NewReleases = [
 
     {
         id: 6,
-        img: 'https://cdn.flightclub.com/2200/TEMPLATE/255909/1.jpg',
+        img: 'https://images.unsplash.com/photo-1551489186-cf8726f514f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8eWVlenl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
         title: 'Nike',
         description: `WMNS DUNK LOW SP 'COLLEGE NAVY'`,
         sizes: [
@@ -764,7 +764,7 @@ export const NewReleases = [
 
     {
         id: 7,
-        img: 'https://cdn.flightclub.com/2200/TEMPLATE/151115/1.jpg',
+        img: 'https://images.unsplash.com/photo-1667863034256-13526b9c44ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTcxMXx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         title: 'Air Jordan',
         description: `WMNS AIR JORDAN 4 RETRO 'MUSHROOM'`,
         sizes: [
@@ -892,7 +892,7 @@ export const NewReleases = [
 
     {
         id: 8,
-        img: 'https://cdn.flightclub.com/2200/TEMPLATE/191046/1.jpg',
+        img: 'https://images.unsplash.com/photo-1643584548984-7ecc5adeabf6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjEwOXx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         title: 'Air Jordan',
         description: `WMNS AIR JORDAN 1 HIGH OG 'COURT PURPLE'`,
         sizes: [
@@ -912,77 +912,77 @@ export const NewReleases = [
 
             {
                 size: 3,
-                price: '300$+',
+                price: '350$+',
                 id: 4.3
     
             },
 
             {
                 size: 4,
-                price: '300$+',
+                price: '280$+',
                 id: 4.4
     
             },
 
             {
                 size: 5,
-                price: '300$+',
+                price: '390$+',
                 id: 4.5
     
             },
 
             {
                 size: 6,
-                price: '300$+',
+                price: '180$+',
                 id: 4.6
     
             },
 
             {
                 size: 7,
-                price: '300$+',
+                price: '210$+',
                 id: 4.7
     
             },
 
             {
                 size: 8,
-                price: '300$+',
+                price: '340$+',
                 id: 4.8
     
             },
 
             {
                 size: 9,
-                price: '300$+',
+                price: '205$+',
                 id: 4.9
     
             },
 
             {
                 size: 10,
-                price: '300$+',
+                price: '247$+',
                 id: 4.10
     
             },
 
             {
                 size: 11,
-                price: '300$+',
+                price: '283$+',
                 id: 4.11
     
             },
 
             {
                 size: 12,
-                price: '300$+',
+                price: '329$+',
                 id: 4.12
     
             },
 
             {
                 size: 13,
-                price: '300$+',
+                price: '348$+',
                 id: 4.13
     
             },
@@ -1010,7 +1010,7 @@ export const NewReleases = [
 
             {
                 size: 17,
-                price: '300$+',
+                price: '207$+',
                 id: 4.17
     
             }
@@ -1022,7 +1022,7 @@ export const NewReleases = [
 export const StaffPicks = [
     {
         id: 9,
-        img: 'https://cdn.flightclub.com/2200/TEMPLATE/327971/1.jpg',
+        img: 'https://images.unsplash.com/photo-1580581321134-06640adb9b34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjE3OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
         title: 'Air Jordan',
         description: `AIR JORDAN 12 RETRO 'BLACK TAXI'`
     },

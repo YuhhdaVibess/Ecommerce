@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React, useState, useEffect} from 'react'
 import './ProductScreen.css';
 import InputBtn from '../input1';
 import Logo from '../logo';
@@ -22,21 +22,56 @@ const ProductScreen = () => {
 
 const { id } = useParams();
 
-const ProductData = [...NewReleases, ...StaffPicks, ...MusicInfluence];
+//const ProductData = [...NewReleases, ...StaffPicks, ...MusicInfluence];
 
-const Product = ProductData.find((product) => {
-  return product.id === parseInt(id);
- });
-  const {title, img, description, catagory, sizes} = Product;
+const [shoes, setShoes] = useState([]);
+const [sizes, setSizes] = useState([]);
+const [Price, setPrice] = useState([sizes[0].price]);
+
+useEffect(() => {
+    fetch('http://localhost:5000/shoes')
+        .then(res => res.json() )
+        .then(data => setShoes(data)); 
+}, []);
+
+
+console.log(shoes, 'shoe info');
+
+useEffect(() => {
+  fetch('http://localhost:5000/sizes')
+      .then(res => res.json())
+      .then(data => setSizes(data));
+}, []);
+
+//const Product = ProductData.find((product) => {
+ // return product.id === parseInt(id);
+ //});
+  //const {title, img, description, catagory, sizes} = Product;
+
+  const Product = shoes.find((shoe) => {
+    return shoe.shoeid === (id);
+   });
+   if (Product) {
+    console.log('product exists')
+   // const {title, img, description, category, category2} = Product;
+   } else {
+    console.log('product not found')
+   }
+  
+
+   // const {title, img, description, catagory, sizes} = Product;
 
 //sizes
-const [price, setPrice] = useState(sizes);
+//this was already commented out before adjusting postgres database // const [price, setPrice] = useState(sizes);
+
+//const [sizes2, setSizes] = useState([sizes]);
+//const [Price, setPrice] = useState(sizes[0].price);
+const [selectedSize, setSelectedSize] = useState(sizes[0].size);
 
 const UpdatePrice = (event) => {
-  const sizePrice = sizes.find(size => size.size === event.target.innerHTML);
-  setPrice(sizePrice)
-console.log(event.target.innerHTML)
-console.log(sizes)
+  const sizePrice = sizes.find((size) => size.size === parseInt(event.target.innerHTML, 10));
+  setPrice(sizePrice.price)
+  setSelectedSize(parseInt(event.target.innerHTML), 10);
 }
   
     
@@ -46,7 +81,7 @@ const Sizes2 = sizes.find((sizes) =>
 );
 
 const Sizes = sizes.map((sizes) => 
-  <div onClick={UpdatePrice} value={sizes.price} className='Sizes'>{sizes.size}</div>
+  <div onClick={UpdatePrice} value={sizes.price} className= {sizes.size === selectedSize ? "Sizes-selected" : "Sizes"}>{sizes.size}</div>
 );
 //end
 
@@ -58,22 +93,22 @@ const Sizes = sizes.map((sizes) =>
        <Link to = '/' style={{ textDecoration: 'none'}}>
        <Logo />
        </Link>
-      
        <NavList />
       </header>
-
+    
       <div className='Product-Section'>
        <img className='Product-Screen-img' src={img}></img>
         <div className='Product-Screen-info-container'>
           <div className='Product-Screen-info'>
             <h1 className='Product-Screen-Title'>{title}</h1>
             <p className='Product-Screen-Description'>{description}</p>
-            <p className='Catagory'>{catagory}</p>
+            <p className='Catagory'>{category}</p>
            <div className='Sizes-Container'>{Sizes}</div>
            <div className='Product-btns'>
             <div className='Product-btn1'>
             <label style={{fontWeight: 500,  fontSize: 14, fontFamily: "Helvetica Neue"}}>BUY NEW</label>
-            <Button className='Product-btn' value={price}/>
+            <button className='Product-btn'>${Price}+</button>
+            
             </div>
             <div className='Product-btn2'>
             <label style={{fontWeight: 500,  fontSize: 14, fontFamily: "Helvetica Neue"}}>BUY USED</label>
@@ -142,3 +177,26 @@ const Sizes = sizes.map((sizes) =>
 }
 
 export default ProductScreen
+
+//The useState hook is a function that returns an array with two elements: the current state and a function that updates the state. You can then destructure this array to give names to the state and the function.
+
+//In this case, the initial value of the sizes2 state variable is set to [sizes], which is an array containing the sizes property of the product. This is done because useState expects the initial state to be a single value, and the value must be the same type each time the component renders. By putting sizes inside an array, it becomes a single value of type array.
+
+//If the initial value of sizes2 was set to just sizes, like this:
+
+//Copy code
+//const [sizes2, setSizes] = useState(sizes);
+//then sizes2 would be set to an object with properties size and price. This would work fine as long as the value of sizes never changes, but if the value of sizes changed (for example, if the user selected a different size), then sizes2 would be set to a new object with different properties. This would cause a re-render of the component, which is not what we want.
+
+//By wrapping sizes in an array, the value of sizes2 will always be an array, and the contents of the array may change, but the array itself will not be replaced with a new object. This means that the component will not re-render when the value of sizes changes, which is more efficient.
+
+//I hope this helps to clarify things! Let me know if you have any more questions.
+
+//In the code, sizes is an array of objects, each representing a size of the product with a size and price property.
+
+//useState is a hook in React that allows a functional component to have state variables. It takes an initial value as an argument and returns an array with two elements: the current value of the state variable and a function to update it. In this case, the initial value of the state variable sizes2 is being set to the sizes array of the product.
+
+//The reason the sizes array is wrapped in square brackets when it is passed as an argument to useState is because the hook expects the initial value to be a single element. If you don't wrap sizes in square brackets, it will be treated as multiple arguments, which will cause an error.
+
+//For example, if you wrote const [sizes2, setSizes] = useState(sizes), it would be equivalent to writing const [sizes2, setSizes] = useState(sizes[0], sizes[1], sizes[2], ...), which would cause an error because useState only expects one argument. Wrapping sizes in square brackets allows you to pass the entire array as a single argument.
+

@@ -72,11 +72,12 @@
    font-size: 14px;
    font-weight: 500;
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+    user-select: none;
 }
 
 .Sizes:hover {
     border: 1.5px solid grey;
+    user-select: none;
 }
 
 
@@ -169,3 +170,21 @@ padding-top: 10px;
     background-color: black;
     color: green;
 }
+
+.Sizes-selected {
+    outline: 1px solid black;
+    cursor: pointer;
+    line-height: 42px;
+    border: 1.5px solid rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    user-select: none;
+  }
+
+  .product-img-post {
+    height: 100px;
+    width: 100px;
+  }

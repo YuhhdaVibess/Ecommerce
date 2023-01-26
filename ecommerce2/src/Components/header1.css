@@ -1,9 +1,35 @@
 .header1 {
     background-color: black;
-    height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 2;
+}
+
+.header2 {
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+
+.Nav-list {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.Nav-list2 {
+    opacity: 0;
 }

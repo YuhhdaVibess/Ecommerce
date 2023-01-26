@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactDOM, useState } from 'react';
+import { ReactDOM, useState, useEffect } from 'react';
 import '../header1.css';
 import InputBtn from '../input1';
 import Logo from '../logo';
@@ -25,16 +25,83 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import ProductScreen from './ProductScreen';
 
 
+
+//const SneaksAPI = require('sneaks-api');
+//const sneaks = new SneaksAPI();
+
+
 function HomeScreen() {
+
+//const [backendData, setBackendData] = useState([{}]);
+//useEffect(() => {
+ // fetch("/").then(
+ //   response => response.json()
+ // ).then(
+ //   data => {
+  //    setBackendData(data)
+  //  }
+ // )
+//}, []);
+
+//<div> 
+//{(typeof backendData.users === 'undefined') ? (
+ //<p>Loading...</p>
+//) : (
+// backendData.users.map((user, i) => (
+  // <p key={i}>{user}</p>
+ //))
+//)}        
+//</div>
+//
+
+
+const [shoes, setShoes] = useState([]);
+
+useEffect(() => {
+    fetch('http://localhost:5000/shoes')
+        .then(res => res.json())
+        .then(data => setShoes(data)); 
+}, []);
+
+console.log(shoes);
+
+
+
+
   return (
     <div className='App'>
-       <header className="header1">
-       <InputBtn />
-       <Link to = '/' style={{ textDecoration: 'none'}}>
-       <Logo />
-       </Link>
-       <NavList />
-      </header>
+        <div className='header1'>
+        <InputBtn />
+          <Link to = '/' style={{ textDecoration: 'none'}}>
+           <Logo />
+          </Link>
+          <NavList /> 
+        </div>
+    
+
+        <div className='main'>
+          <div className='products-container1'>
+          {shoes.map(shoe => (
+            <div key={shoe.shoeid}>
+                <Link to={`/products/${shoe.shoeid}`} style={{textDecoration: 'none'}}>
+                    <div className='Product'> 
+                        <img className='product img' src={shoe.img} />
+                        <h1 className='Title'>{shoe.title}</h1>
+                        <p className='Description'>{shoe.description}</p>
+                    </div>
+                </Link> 
+            </div>
+        ))}
+          </div>
+       
+</div>
+             
+           
+
+
+        
+      
+        
       <div className='main'>
         <img src='https://wallpaperaccess.com/full/680084.jpg' />
         <div className='container'>
@@ -91,6 +158,11 @@ function HomeScreen() {
   </footer>
     </div>
   )
+
+  
 }
+
+
+
 
 export default HomeScreen

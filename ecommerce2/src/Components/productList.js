@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import { NewReleases } from "../data";
 import { StaffPicks } from "../data";
 import { MusicInfluence } from "../data";
-import ProductScreen from "./Screens/ProductScreen";
-
-
 
 
 export const NewReleasesProducts = NewReleases.map((NewReleases) =>
