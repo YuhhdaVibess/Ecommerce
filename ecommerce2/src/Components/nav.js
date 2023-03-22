@@ -1,4 +1,5 @@
 import './nav.css'
+import { Link } from 'react-router-dom';
 
 function NavList() {
   return ( 
@@ -9,19 +10,17 @@ function NavList() {
     </li>
 
     <li>
-        <a href='google.com'> FC Apparel</a>
+        <a href='google.com'>Contact</a>
     </li>
 
     <li>
-        <a href='google.com'> FC Fridays</a>
+        <a href='google.com'> Location</a>
     </li>
-
+  
     <li>
-        <a href='google.com'> Stores</a>
-    </li>
-
-    <li>
-        <a href='google.com'> Account</a>
+     <Link to = '/login' style={{ textDecoration: 'none'}}>
+      <a href=''>Account</a>
+     </Link>
     </li>
   
   </ul>

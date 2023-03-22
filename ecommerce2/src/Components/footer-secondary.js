@@ -5,19 +5,15 @@ function SecondFooter() {
         <div className='footer-secondary2'>
             <ul className='footer-secondary3'>
     <li>
-        <a href='https://www.google.com/'> Terms</a>
+        <a href='https://www.google.com/'>Terms</a>
     </li>
 
     <li>
-        <a href='google.com'> Privacy</a>
+        <a href='google.com'>Privacy</a>
     </li>
 
     <li>
-        <a href='google.com'> Press</a>
-    </li>
-
-    <li>
-        <a href='google.com'> Jobs</a>
+        <a href='google.com'>About</a>
     </li>
 
   </ul>

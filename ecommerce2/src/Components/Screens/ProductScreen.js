@@ -27,13 +27,17 @@ const { id } = useParams();
 const [shoes, setShoes] = useState([]);
 const [sizes, setSizes] = useState([]);
 const [Price, setPrice] = useState([sizes[0].price]);
+const [product, setProduct] = useState(null);
 
 useEffect(() => {
-    fetch('http://localhost:5000/shoes')
-        .then(res => res.json() )
-        .then(data => setShoes(data)); 
+  fetch('http://localhost:5000/shoes')
+    .then(res => res.json())
+    .then(data => {
+      setShoes(data);
+      const product = shoes.find((shoe) => shoe.shoeid === id); // find product inside effect
+      setProduct(product); // set product to state
+    });
 }, []);
-
 
 console.log(shoes, 'shoe info');
 
@@ -41,22 +45,24 @@ useEffect(() => {
   fetch('http://localhost:5000/sizes')
       .then(res => res.json())
       .then(data => setSizes(data));
+      console.log(sizes, 'sizes')
 }, []);
+
 
 //const Product = ProductData.find((product) => {
  // return product.id === parseInt(id);
  //});
   //const {title, img, description, catagory, sizes} = Product;
 
-  const Product = shoes.find((shoe) => {
-    return shoe.shoeid === (id);
-   });
-   if (Product) {
-    console.log('product exists')
-   // const {title, img, description, category, category2} = Product;
-   } else {
-    console.log('product not found')
-   }
+  //this is the new one uncomment this, const Product = shoes.find((shoe) => {
+   // return shoe.shoeid === (id);
+  // });
+  // if (Product) {
+  //  console.log('product exists')
+ //  // const {title, img, description, category, category2} = Product;
+  // } else {
+  //  console.log('product not found')
+  // }
   
 
    // const {title, img, description, catagory, sizes} = Product;
@@ -95,19 +101,19 @@ const Sizes = sizes.map((sizes) =>
        </Link>
        <NavList />
       </header>
-    
+
       <div className='Product-Section'>
-       <img className='Product-Screen-img' src={img}></img>
+       <img className='Product-Screen-img' ></img>
         <div className='Product-Screen-info-container'>
           <div className='Product-Screen-info'>
-            <h1 className='Product-Screen-Title'>{title}</h1>
-            <p className='Product-Screen-Description'>{description}</p>
-            <p className='Catagory'>{category}</p>
-           <div className='Sizes-Container'>{Sizes}</div>
+            <h1 className='Product-Screen-Title'></h1>
+            <p className='Product-Screen-Description'></p>
+            <p className='Catagory'></p>
+           <div className='Sizes-Container'></div>
            <div className='Product-btns'>
             <div className='Product-btn1'>
             <label style={{fontWeight: 500,  fontSize: 14, fontFamily: "Helvetica Neue"}}>BUY NEW</label>
-            <button className='Product-btn'>${Price}+</button>
+            <button className='Product-btn'>$+</button>
             
             </div>
             <div className='Product-btn2'>

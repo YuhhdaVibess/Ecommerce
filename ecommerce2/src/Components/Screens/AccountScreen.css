@@ -1,0 +1,99 @@
+.account-main {
+    height: 88.8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    background-color: white;
+    font-family: Open Sans;
+}
+
+.account-main-box {
+    height: 550px;
+    width: 1000px;
+    z-index: 80;
+    position: absolute;
+    padding: 40px;
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    height: 100px;
+    width: 100%;
+    margin-top: -50px;
+}
+
+.user-account-logout {
+    font-size: large;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    padding: 11px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 620px;
+}
+
+.all-account-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "account-info address-info"
+        "order-info payment-info";
+        gap: 8em;
+        border-left: 1px solid black;
+}
+
+.account-info {
+    grid-area: account-info;
+   margin-top: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+   
+}
+
+.order-info {
+    grid-area: order-info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.address-info {
+    grid-area: address-info;
+    margin-top: 10px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.payment-info {
+    grid-area: payment-info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.edit-btn {
+    margin-left: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+

@@ -152,8 +152,8 @@ console.log(shoes);
     </nav>
    <footer className='footer-secondary'>
     <SecondFooter />
-      <h1 style={{fontSize: 20}}>© 2022 Flight Club New York LLC. All Rights Reserved</h1>
       <CurrencyBtn />   
+      <h1 style={{fontSize: 14, marginRight: 20}}>© 2023 Bkicks-JBWebdev | Joshua Christopher </h1>
    </footer>
   </footer>
     </div>

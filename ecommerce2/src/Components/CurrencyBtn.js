@@ -3,7 +3,7 @@ import './footer-secondary.css';
 function CurrencyBtn() {
     return(
         <button className='Currency-Btn'>
-            United States/USD
+            social media icons/links
         </button>
     )
 }
